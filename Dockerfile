@@ -24,6 +24,6 @@ EXPOSE 8080
 
 # Start Voila (widgets enabled), listen on all interfaces
 #CMD ["sh", "-c", "voila app.ipynb --no-browser --ip=0.0.0.0 --port=${PORT:-8080} --Voila.enable_nbextensions=True"]
-CMD ["sh", "-c", "voila app.ipynb --no-browser --Voila.ip=0.0.0.0 --Voila.port=${PORT:-8080}"]
-
+#CMD ["sh", "-c", "voila app.ipynb --no-browser --Voila.ip=0.0.0.0 --Voila.port=${PORT:-8080}"]
+CMD ["sh", "-c", "voila app.ipynb --no-browser --Voila.ip=0.0.0.0 --Voila.port=${PORT:-8080} --Voila.kernel_name=python3"]
 
